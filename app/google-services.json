@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "937886115816",
+    "project_id": "itd-library",
+    "storage_bucket": "itd-library.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:937886115816:android:336c0bb74c99d63ec0a65d",
+        "android_client_info": {
+          "package_name": "com.example.loginpage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "937886115816-lf8qsll9ph91e0fal1oq1fq2mni1gm34.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALEOSjnHU7CIV-bfXEawONNj0MoYn5IM4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "937886115816-lf8qsll9ph91e0fal1oq1fq2mni1gm34.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

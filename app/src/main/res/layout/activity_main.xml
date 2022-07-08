@@ -2,63 +2,103 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:gravity="center"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/imgback">
+    android:background="@drawable/imgback"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign In"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:textSize="30dp"
         android:layout_marginBottom="30dp"
-
-         />
+        android:text="Log In"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        />
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="17dp"
         android:padding="10dp"
-        app:cardCornerRadius="20dp"
-        >
+        app:cardCornerRadius="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
             <EditText
+                android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="25dp"
                 android:layout_marginEnd="15dp"
-                android:hint="Username"
-                android:padding="10dp"></EditText>
+                android:hint="Email"
+                android:ems="10"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:drawableStart="@drawable/ic_email"
+                android:inputType="textEmailAddress"
+                android:padding="10dp">
 
-            <EditText
+            </EditText>
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="25dp"
                 android:layout_marginEnd="15dp"
-                android:hint="Roll No"
-                android:padding="10dp"></EditText>
-
+                android:backgroundTint="@color/white"
+                app:boxStrokeErrorColor="@color/myRed"
+                android:gravity="center"
+                app:passwordToggleEnabled="true"
+                app:startIconDrawable="@drawable/ic_lock"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:backgroundTint="#00010000"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:inputType="textWebPassword"
+                    android:padding="10dp">
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
             <Button
                 android:id="@+id/login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="5dp"
                 android:backgroundTint="#03A9F4"
                 android:padding="10dp"
                 android:text="LOGIN"
                 android:textSize="15dp" />
-
+            <Button
+                android:id="@+id/registerBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#03A9F4"
+                android:padding="10dp"
+                android:text="Register"
+                android:textSize="15dp" />
+            <TextView
+                android:id="@+id/forgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot Password?"
+                android:textSize="18sp"
+                android:layout_margin="15dp"
+                android:layout_gravity="center"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
