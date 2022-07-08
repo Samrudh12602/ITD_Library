@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">LoginPage</string>
+    <string-array name="year">
+        <item>Select A Year</item>
+        <item>FE</item>
+        <item>SE</item>
+        <item>TE</item>
+        <item>BE</item>
+    </string-array>
+    <string-array name="FE">
+        <item>Select Semester</item>
+        <item>SEMESTER 1</item>
+        <item>SEMESTER 2</item>
+    </string-array>
+    <string-array name="SE">
+        <item>Select Semester</item>
+        <item>SEMESTER 3</item>
+        <item>SEMESTER 4</item>
+    </string-array>
+    <string-array name="TE">
+        <item>Select Semester</item>
+        <item>SEMESTER 5</item>
+        <item>SEMESTER 6</item>
+    </string-array>
+    <string-array name="BE">
+        <item>Select Semester</item>
+        <item>SEMESTER 7</item>
+        <item>SEMESTER 8</item>
+    </string-array>
+</resources>
