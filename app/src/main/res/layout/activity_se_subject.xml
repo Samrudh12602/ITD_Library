@@ -265,7 +265,7 @@
                         android:text="OOPJ"
                         android:layout_margin="3dp"
 
-                        android:textColor="#E4039BE5"
+                        android:textColor="@color/myBlue"
                         android:textStyle="bold"
                         android:textSize="30dp"
 
@@ -330,7 +330,7 @@
                         android:layout_height="wrap_content"
                         android:text="DAA"
                         android:layout_margin="3dp"
-                        android:textColor="#E4039BE5"
+                        android:textColor="@color/myBlue"
                         android:textStyle="bold"
                         android:textSize="30dp"
 

@@ -9,7 +9,6 @@
     tools:context=".MainActivity"
     android:layout_margin="20dp"
     >
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"

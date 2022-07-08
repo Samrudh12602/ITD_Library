@@ -1,51 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/imgback"
     android:layout_height="match_parent"
-    tools:context=".YearSelectionActivity">
+    tools:context=".YearSelectionActivity"
 
-    <Spinner
-        android:id="@+id/year"
+    >
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="25dp"
-        android:padding="10dp"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.147" />
-
-    <Spinner
-        android:id="@+id/semester"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="25dp"
-        android:padding="10dp"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/year"
-        app:layout_constraintVertical_bias="0.343" />
-
-    <Button
-        android:id="@+id/proceedButton"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/semester"
-        app:layout_constraintStart_toStartOf="@+id/semester"
-        app:layout_constraintTop_toBottomOf="@+id/semester"
-        android:text="Proceed"
-        android:backgroundTint="#03A9F4"
-        android:padding="15dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_marginTop="50dp"
+        android:textColor="#1B68AB"
+        android:text="SELECT A YEAR"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:gravity="center"
+        ></TextView>
+
+    <GridLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:columnCount="2"
+        android:layout_marginTop="30dp"
+        android:layout_margin="30dp"
+        android:rowCount="2"
+
+        >
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:elevation="8dp"
+            android:outlineAmbientShadowColor="@color/black"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_margin="28dp"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="center_vertical|center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FE"
+                    android:textColor="#E4039BE5"
+                    android:textStyle="bold"
+                    android:textSize="30dp"
+
+                    />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="28dp"
+            app:cardCornerRadius="10dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="center_vertical|center_horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SE"
+                    android:textColor="#E4039BE5"
+                    android:textStyle="bold"
+                    android:textSize="30dp"
+
+                    />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_margin="28dp"
+            app:cardCornerRadius="10dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="center_vertical|center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TE"
+                    android:textColor="#E4039BE5"
+                    android:textStyle="bold"
+                    android:textSize="30dp"
+
+                    />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:elevation="8dp"
+            android:outlineAmbientShadowColor="@color/black"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="28dp"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="center_vertical|center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BE"
+                    android:textColor="#E4039BE5"
+                    android:textStyle="bold"
+                    android:textSize="30dp"
+
+                    />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
+
+
+</LinearLayout>
