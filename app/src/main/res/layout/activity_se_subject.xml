@@ -68,7 +68,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="DSA"
+                        android:text="Data Struct"
                         android:layout_margin="3dp"
 
                         android:textColor="#E4039BE5"
