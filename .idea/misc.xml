@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/PROGRAMMING/ITD_Library/app/src/main/res/layout/activity_main.xml" value="0.37907608695652173" />
+        <entry key="..\:/PROGRAMMING/ITD_Library/app/src/main/res/layout/activity_year_selection.xml" value="0.37907608695652173" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.27706593835765647" />
         <entry key="app/src/main/res/layout/activity_year_selection.xml" value="0.16210739614994935" />
         <entry key="app/src/main/res/layout/year_dropdown.xml" value="0.16210739614994935" />
