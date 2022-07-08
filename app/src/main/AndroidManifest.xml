@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginPage">
         <activity
+            android:name=".splashactivity"
+            android:exported="true" />
+        <activity
+            android:name=".TE_subjects"
+            android:exported="true" />
+        <activity
             android:name=".SE_subject"
             android:exported="true" />
         <activity
