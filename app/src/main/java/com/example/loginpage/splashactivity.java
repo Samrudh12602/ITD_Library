@@ -10,5 +10,6 @@ public class splashactivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splashactivity);
+        getSupportActionBar().hide();
     }
 }
