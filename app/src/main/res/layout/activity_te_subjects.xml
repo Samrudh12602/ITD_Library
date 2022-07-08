@@ -14,16 +14,16 @@
         android:layout_height="wrap_content"
         android:text="THIRD YEAR"
         android:padding="5dp"
-        android:textColor="#000509"
+        android:textColor="#022847"
         android:textStyle="bold"
-        android:textSize="30dp"
+        android:textSize="25dp"
         android:gravity="center"
 
         />
     <LinearLayout
         android:layout_marginTop="0dp"
         android:orientation="vertical"
-        android:padding="10dp"
+        android:padding="7dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -32,10 +32,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="SEM V"
-            android:padding="5dp"
+
             android:textColor="#1B68AB"
             android:textStyle="bold"
-            android:textSize="30dp"
+            android:textSize="25dp"
             android:gravity="center"
 
             />
@@ -52,7 +52,7 @@
                 android:layout_row="0"
                 android:layout_rowWeight="1"
                 android:elevation="8dp"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:outlineAmbientShadowColor="@color/black"
                 android:layout_column="0"
                 android:layout_columnWeight="1"
@@ -146,15 +146,48 @@
                         />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="3"
+                android:layout_rowWeight="1"
+                android:elevation="8dp"
+
+                android:layout_margin="10dp"
+                android:outlineAmbientShadowColor="@color/black"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical|center_horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Elective"
+                        android:layout_margin="3dp"
+                        android:textColor="#E4039BE5"
+                        android:textStyle="bold"
+                        android:textSize="30dp"
+
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
 
         </GridLayout>
 
     </LinearLayout>
     <LinearLayout
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="2dp"
         android:orientation="vertical"
-        android:padding="10dp"
+        android:padding="6dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -163,10 +196,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="SEM VI"
-            android:padding="5dp"
+
             android:textColor="#1B68AB"
             android:textStyle="bold"
-            android:textSize="30dp"
+            android:textSize="25dp"
             android:gravity="center"
 
             />
@@ -325,7 +358,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="elective"
+                        android:text="Elective"
                         android:layout_margin="3dp"
                         android:textColor="#E4039BE5"
                         android:textStyle="bold"
