@@ -19,7 +19,6 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class YearSelectionActivity extends AppCompatActivity {
     CardView fe,se,te,be;
-    Button logout;
     FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,14 +28,7 @@ public class YearSelectionActivity extends AppCompatActivity {
         se=findViewById(R.id.seCardView);
         te=findViewById(R.id.teCardView);
         be=findViewById(R.id.beCardView);
-        logout=findViewById(R.id.logout);
         auth=FirebaseAuth.getInstance();
-//        logout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//            }
-//        });
         View.OnClickListener listener= new View.OnClickListener() {
             @Override
             public void onClick(View view) {
