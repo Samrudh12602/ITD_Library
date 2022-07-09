@@ -22,6 +22,13 @@
         android:padding="10dp"
         android:gravity="center"
         ></TextView>
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="logout">
+        </Button>
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="500dp"

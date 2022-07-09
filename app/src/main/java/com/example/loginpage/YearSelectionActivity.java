@@ -6,10 +6,17 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
+
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class YearSelectionActivity extends AppCompatActivity {
     CardView fe,se,te,be;
+    Button logout;
+    FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +25,16 @@ public class YearSelectionActivity extends AppCompatActivity {
         se=findViewById(R.id.seCardView);
         te=findViewById(R.id.teCardView);
         be=findViewById(R.id.beCardView);
+        logout=findViewById(R.id.logout);
+        auth=FirebaseAuth.getInstance();
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                auth.signOut();
+                startActivity(new Intent(YearSelectionActivity.this,MainActivity.class));
+                finish();
+            }
+        });
         View.OnClickListener listener= new View.OnClickListener() {
             @Override
             public void onClick(View view) {

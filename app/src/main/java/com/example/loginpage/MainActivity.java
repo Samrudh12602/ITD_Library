@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -35,21 +36,11 @@ public class MainActivity extends AppCompatActivity {
         register = findViewById(R.id.registerBtn);
         mail = findViewById(R.id.email);
         pass = findViewById(R.id.password);
-
-        email = mail.getText().toString();
-        password = pass.getText().toString();
         mAuth = FirebaseAuth.getInstance();
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
-                    Toast.makeText(getApplicationContext(), "Empty Credentials", Toast.LENGTH_LONG).show();
-                } else if (password.length() < 6) {
-                    Toast.makeText(getApplicationContext(), "Password Too short", Toast.LENGTH_LONG).show();
-                } else {
-//                    loginUser(email, password);
-                }
-                startActivity(new Intent(MainActivity.this, YearSelectionActivity.class));
+                validateUser();
             }
         });
         register.setOnClickListener(new View.OnClickListener() {
@@ -59,40 +50,54 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    public void validateUser(){
+        email = mail.getText().toString();
+        password = pass.getText().toString();
+        if (email.isEmpty()) {
+            Toast.makeText(getApplicationContext(), "Empty Email", Toast.LENGTH_LONG).show();
+            mail.requestFocus();
+        } else if (password.isEmpty()) {
+            Toast.makeText(getApplicationContext(), "Password Empty ", Toast.LENGTH_LONG).show();
+            pass.requestFocus();
+        } else if(password.length()<6){
+
+        } else {
+            loginUser(email, password);
+        }
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if(mAuth.getCurrentUser()!=null){
+            startActivity(new Intent(MainActivity.this,YearSelectionActivity.class));
+            finish();
+        }
+    }
+
     private void loginUser(String email, String password) {
         mAuth.signInWithEmailAndPassword(email,password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
             @Override
             public void onSuccess(AuthResult authResult) {
-                pd= new ProgressDialog(MainActivity.this);
+                pd = new ProgressDialog(MainActivity.this);
                 pd.setMessage("Logging In....");
                 pd.setCancelable(false);
                 pd.show();
-                Handler handler= new Handler();
+                Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        Intent i=new Intent(MainActivity.this,YearSelectionActivity.class);
+                        Intent i = new Intent(MainActivity.this, YearSelectionActivity.class);
                         startActivity(i);
                         pd.dismiss();
-                        Toast.makeText(MainActivity.this,"Login Successful",Toast.LENGTH_LONG).show();
-                        FirebaseUser user= mAuth.getCurrentUser();
+                        Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_LONG).show();
+                        FirebaseUser user = mAuth.getCurrentUser();
                         updateUI(user);
                         finish();
                     }
-                },1500);
+                }, 1500);
             }
         });
-    }
 
-    private void sendEmailVerification() {
-        final FirebaseUser user = mAuth.getCurrentUser();
-        user.sendEmailVerification()
-                .addOnCompleteListener(this, new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        Toast.makeText(getApplicationContext(), "Verification Email sent", Toast.LENGTH_LONG).show();
-                    }
-                });
     }
     private void updateUI(FirebaseUser currentUser) {
         if(currentUser!=null){

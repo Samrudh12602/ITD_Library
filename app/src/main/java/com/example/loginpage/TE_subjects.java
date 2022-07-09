@@ -9,21 +9,11 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 public class TE_subjects extends AppCompatActivity {
-Button back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         setContentView(R.layout.activity_te_subjects);
-        back=findViewById(R.id.backbutton);
-        View.OnClickListener listener= new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),YearSelectionActivity.class));
-
-            }
-        };
-        back.setOnClickListener(listener);
     }
-
 }

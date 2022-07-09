@@ -31,7 +31,7 @@ public class RegisterActivity extends AppCompatActivity {
     private FirebaseAuth auth;
     private FirebaseDatabase database;
     private DatabaseReference mDatabase;
-    private Button register;
+    private Button register,login;
     private EditText email,rollnumber,name;
     private TextInputEditText password;
     private static final String USER="user";
@@ -42,6 +42,7 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
         auth=FirebaseAuth.getInstance();
         register= findViewById(R.id.regBtn);
+        login= findViewById(R.id.login);
         email=findViewById(R.id.etEmail);
         password= findViewById(R.id.etPassword);
         name= findViewById(R.id.etName);
@@ -54,16 +55,27 @@ public class RegisterActivity extends AppCompatActivity {
                 String email_txt= email.getText().toString();
                 String pass_txt= password.getText().toString();
                 String name_txt= name.getText().toString();
-                String roll_txt= name.getText().toString();
+                String roll_txt= rollnumber.getText().toString();
                 user= new USer(email_txt,pass_txt,name_txt,roll_txt);
-                if(TextUtils.isEmpty(email_txt)||TextUtils.isEmpty(pass_txt)){
-                    Toast.makeText(RegisterActivity.this,"Credentials are Empty",Toast.LENGTH_LONG).show();
-                }else if(pass_txt.length()<6){
+                if(email_txt.isEmpty()){
+                    email.setError("Required");
+                    email.requestFocus();
+                }else if(pass_txt.isEmpty()){
+                    password.setError("Required");
+                    password.requestFocus();
                     Toast.makeText(RegisterActivity.this,"Password Must be at least 6 characters Long",Toast.LENGTH_LONG).show();
                 }
                 else{
                     registerUser(email_txt,pass_txt);
                 }
+            }
+        });
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(RegisterActivity.this,MainActivity.class));
+                finish();
+                finishAffinity();
             }
         });
     }

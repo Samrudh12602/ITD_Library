@@ -3,16 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/PROGRAMMING/ITD_Library/app/src/main/res/layout/activity_main.xml" value="0.37907608695652173" />
-        <entry key="..\:/PROGRAMMING/ITD_Library/app/src/main/res/layout/activity_year_selection.xml" value="0.37907608695652173" />
-        <entry key="..\:/Users/AAVISHKAR/AndroidStudioProjects/ITD_Library/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.19375" />
-        <entry key="..\:/Users/AAVISHKAR/AndroidStudioProjects/ITD_Library/app/src/main/res/layout/activity_be_subjects.xml" value="0.2" />
-        <entry key="..\:/Users/AAVISHKAR/AndroidStudioProjects/ITD_Library/app/src/main/res/layout/activity_main.xml" value="0.16875" />
-        <entry key="..\:/Users/AAVISHKAR/AndroidStudioProjects/ITD_Library/app/src/main/res/layout/activity_se_subject.xml" value="0.16875" />
-        <entry key="..\:/Users/AAVISHKAR/AndroidStudioProjects/ITD_Library/app/src/main/res/layout/activity_splashactivity.xml" value="0.16875" />
-        <entry key="..\:/Users/AAVISHKAR/AndroidStudioProjects/ITD_Library/app/src/main/res/layout/activity_te_subjects.xml" value="0.2" />
-        <entry key="..\:/Users/AAVISHKAR/AndroidStudioProjects/ITD_Library/app/src/main/res/layout/activity_year_selection.xml" value="0.16875" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.27706593835765647" />
+        <entry key="app/src/main/res/layout/activity_be_subjects.xml" value="0.1852355072463768" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.17604166666666668" />
+        <entry key="app/src/main/res/layout/activity_se_subject.xml" value="0.1852355072463768" />
+        <entry key="app/src/main/res/layout/activity_splashactivity.xml" value="0.17083333333333334" />
+        <entry key="app/src/main/res/layout/activity_te_subjects.xml" value="0.14033563463594043" />
         <entry key="app/src/main/res/layout/activity_year_selection.xml" value="0.16210739614994935" />
         <entry key="app/src/main/res/layout/year_dropdown.xml" value="0.16210739614994935" />
         <entry key="app/src/main/res/menu/year_dropdown.xml" value="0.3282051282051282" />
