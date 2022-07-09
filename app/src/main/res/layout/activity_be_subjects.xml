@@ -3,18 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:background="@drawable/imgback"
     android:layout_height="match_parent"
     tools:context=".BE_subjects">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        >
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="FINAL YEAR"
+
             android:padding="5dp"
+            android:layout_marginTop="20dp"
             android:textColor="#022847"
             android:textStyle="bold"
             android:textSize="25dp"
@@ -22,9 +28,11 @@
 
             />
         <LinearLayout
-            android:layout_marginTop="0dp"
+
             android:orientation="vertical"
             android:padding="7dp"
+            android:layout_marginTop="30dp"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
@@ -33,7 +41,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="SEM VII"
-
+                android:layout_marginTop="10dp"
                 android:textColor="#1B68AB"
                 android:textStyle="bold"
                 android:textSize="25dp"
@@ -44,7 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:columnCount="1"
-                android:rowCount="4"
+                android:rowCount="2"
                 android:layout_margin="20dp">
                 <androidx.cardview.widget.CardView
 
@@ -69,7 +77,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="DBMS"
+                            android:text="IP"
                             android:layout_margin="3dp"
 
                             android:textColor="#E4039BE5"
@@ -79,79 +87,15 @@
                             />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
+
+
+
 
                 <androidx.cardview.widget.CardView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_row="1"
-                    android:layout_rowWeight="1"
-                    android:elevation="8dp"
-                    android:layout_gravity="fill"
-                    android:layout_margin="10dp"
-                    android:outlineAmbientShadowColor="@color/black"
-                    android:layout_column="0"
-                    android:layout_columnWeight="1"
-
-                    app:cardCornerRadius="10dp">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        android:layout_gravity="center_vertical|center_horizontal">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="TOC"
-                            android:layout_margin="3dp"
-                            android:textColor="#E4039BE5"
-                            android:textStyle="bold"
-                            android:textSize="30dp"
-
-                            />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_row="2"
-                    android:layout_rowWeight="1"
-                    android:elevation="8dp"
-                    android:layout_gravity="fill"
-                    android:layout_margin="10dp"
-                    android:outlineAmbientShadowColor="@color/black"
-                    android:layout_column="0"
-                    android:layout_columnWeight="1"
-
-                    app:cardCornerRadius="10dp">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        android:layout_gravity="center_vertical|center_horizontal">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="EE"
-                            android:layout_margin="3dp"
-                            android:textColor="#E4039BE5"
-                            android:textStyle="bold"
-                            android:textSize="30dp"
-
-                            />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_row="3"
                     android:layout_rowWeight="1"
                     android:elevation="8dp"
                     android:layout_gravity="fill"
@@ -182,185 +126,97 @@
                 </androidx.cardview.widget.CardView>
             </GridLayout>
         </LinearLayout>
+
         <LinearLayout
-            android:layout_marginTop="2dp"
-            android:orientation="vertical"
-            android:padding="6dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            >
+
+            android:layout_marginTop="30dp"
+
+            android:orientation="vertical"
+            android:padding="6dp">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
                 android:text="SEM VIII"
                 android:textColor="#1B68AB"
-                android:textStyle="bold"
                 android:textSize="25dp"
-                android:gravity="center"
-                />
+                android:textStyle="bold" />
+
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="20dp"
                 android:columnCount="1"
-                android:rowCount="4"
-                android:layout_margin="20dp">
+                android:rowCount="2">
+
                 <androidx.cardview.widget.CardView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_row="0"
-                    android:elevation="8dp"
-                    android:layout_gravity="fill"
-                    android:layout_margin="10dp"
-                    android:outlineAmbientShadowColor="@color/black"
                     android:layout_column="0"
                     android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_margin="10dp"
+                    android:elevation="8dp"
+                    android:outlineAmbientShadowColor="@color/black"
 
                     app:cardCornerRadius="10dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
+                        android:layout_gravity="center_vertical|center_horizontal"
                         android:gravity="center"
-                        android:layout_gravity="center_vertical|center_horizontal">
+                        android:orientation="horizontal">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="POC"
                             android:layout_margin="3dp"
+                            android:text="CNS"
 
                             android:textColor="@color/myBlue"
-                            android:textStyle="bold"
                             android:textSize="30dp"
+                            android:textStyle="bold"
 
                             />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
+
+
                 <androidx.cardview.widget.CardView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_row="1"
-                    android:layout_gravity="fill"
-                    android:elevation="8dp"
-                    android:layout_margin="10dp"
-                    android:outlineAmbientShadowColor="@color/black"
                     android:layout_column="0"
                     android:layout_columnWeight="1"
-
-                    app:cardCornerRadius="10dp">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        android:layout_gravity="center_vertical|center_horizontal">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="WT"
-                            android:layout_margin="3dp"
-                            android:textColor="#E4039BE5"
-                            android:textStyle="bold"
-                            android:textSize="30dp"
-
-                            />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_row="2"
-                    android:elevation="8dp"
-
-                    android:layout_margin="10dp"
-                    android:outlineAmbientShadowColor="@color/black"
-                    android:layout_column="0"
-                    android:layout_columnWeight="1"
-
-                    app:cardCornerRadius="10dp">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        android:layout_gravity="center_vertical|center_horizontal">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="TERW"
-                            android:layout_margin="3dp"
-                            android:textColor="@color/myBlue"
-                            android:textStyle="bold"
-                            android:textSize="30dp"
-
-                            />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_row="2"
-                    android:elevation="8dp"
                     android:layout_gravity="fill"
                     android:layout_margin="10dp"
-                    android:outlineAmbientShadowColor="@color/black"
-                    android:layout_column="0"
-                    android:layout_columnWeight="1"
-
-                    app:cardCornerRadius="10dp">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        android:layout_gravity="center_vertical|center_horizontal">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="EE"
-                            android:layout_margin="3dp"
-                            android:textColor="#E4039BE5"
-                            android:textStyle="bold"
-                            android:textSize="30dp"
-
-                            />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_row="3"
                     android:elevation="8dp"
-                    android:layout_gravity="fill"
-                    android:layout_margin="10dp"
                     android:outlineAmbientShadowColor="@color/black"
-                    android:layout_column="0"
-                    android:layout_columnWeight="1"
                     app:cardCornerRadius="10dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
+                        android:layout_gravity="center_vertical|center_horizontal"
                         android:gravity="center"
-                        android:layout_gravity="center_vertical|center_horizontal">
+                        android:orientation="horizontal">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
                             android:text="Elective"
-                            android:layout_margin="3dp"
                             android:textColor="#E4039BE5"
-                            android:textStyle="bold"
                             android:textSize="30dp"
-                            />
+                            android:textStyle="bold" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 

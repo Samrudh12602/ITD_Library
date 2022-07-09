@@ -26,7 +26,7 @@
     <LinearLayout
         android:layout_marginTop="0dp"
         android:orientation="vertical"
-
+        android:id="@+id/sem5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:columnCount="1"
             android:rowCount="4"
-            android:layout_margin="20dp">
+            android:layout_margin="15dp">
             <androidx.cardview.widget.CardView
 
                 android:layout_width="wrap_content"
@@ -188,9 +188,10 @@
 
     </LinearLayout>
     <LinearLayout
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="1dp"
         android:orientation="vertical"
-
+        android:id="@+id/sem6"
+        android:padding="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -211,14 +212,14 @@
             android:layout_height="wrap_content"
             android:columnCount="1"
             android:rowCount="4"
-            android:layout_margin="20dp">
+            android:layout_margin="10dp">
             <androidx.cardview.widget.CardView
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="0"
                 android:elevation="8dp"
-                android:layout_margin="10dp"
+                android:layout_margin="15dp"
                 android:outlineAmbientShadowColor="@color/black"
                 android:layout_column="0"
                 android:layout_columnWeight="1"
