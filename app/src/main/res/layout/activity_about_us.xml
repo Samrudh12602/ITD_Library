@@ -1,9 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
+
+    android:layout_gravity="center"
+    android:background="@drawable/imgback"
     android:layout_height="match_parent"
     tools:context=".AboutUsActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About us"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="#E4044A6C"
+        android:gravity="center"
+        >
+
+    </TextView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+     android:layout_margin="11dp"
+
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        >
+
+        <TextView
+
+            android:padding="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                android:text="The focus of this app is to provide Digital library to the students of Information Technology.It provides the students convinience of learning at their own pace.\n
+
+            \nDeveloped By :\n
+             \nSamrudh Dhaimodkar
+             \nRoll no: 201106064
+             \nBranch : Information technology
+             \nClass: IT-B
+             \n\nSrujana Prabhu
+               \nRoll no: 20110671
+             \nBranch : Information technology
+             \nClass: IT-B
+             \n\nVersion: 1.0.2
+             \n\nContact us:
+             \nSamrudh:samdhaimodkar@gmail.com
+            \nSrujana:srujanaparesh@gmail.com
+"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#E4055C86"/>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
