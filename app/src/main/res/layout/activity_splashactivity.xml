@@ -13,22 +13,28 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+android:padding="5dp"
         android:layout_marginTop="80dp"
-        android:text="Welcome To IT dept Library"
+        android:text="Welcome To IT Dept Library"
         android:textSize="25dp"
         android:layout_marginBottom="40dp"
         android:gravity="center"
         android:textStyle="bold"
-        android:textColor="@color/black"
+        android:textColor="#039BE5"
+
+
         />
 
     <ImageView
 
         android:layout_width="match_parent"
         android:layout_height="400dp"
+        android:padding="20dp"
         android:layout_marginTop="30dp"
-        android:background="@drawable/girlcarryingbooks"></ImageView>
+        android:background="@drawable/girlcarryingbooks"
+        >
+
+    </ImageView>
 
 
 </LinearLayout>
