@@ -32,23 +32,20 @@ public class RegisterActivity extends AppCompatActivity {
     private FirebaseDatabase database;
     private DatabaseReference mDatabase;
     private Button register;
-    private EditText email,username,state,country,contactNum,name;
+    private EditText email,rollnumber,name;
     private TextInputEditText password;
-    private CheckBox male,female;
     private static final String USER="user";
-    private String gender;
     private USer user;
-    private int counter=0;
-    private ImageView viewpassword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         auth=FirebaseAuth.getInstance();
-        register= findViewById(R.id.registerBtn);
-        email=findViewById(R.id.email_edit);
+        register= findViewById(R.id.regBtn);
+        email=findViewById(R.id.etEmail);
         password= findViewById(R.id.etPassword);
-        name= findViewById(R.id.name_edit);
+        name= findViewById(R.id.etName);
+        rollnumber= findViewById(R.id.etRollNumber);
         database= FirebaseDatabase.getInstance();
         mDatabase=database.getReference(USER);
         register.setOnClickListener(new View.OnClickListener() {
@@ -57,7 +54,8 @@ public class RegisterActivity extends AppCompatActivity {
                 String email_txt= email.getText().toString();
                 String pass_txt= password.getText().toString();
                 String name_txt= name.getText().toString();
-                user= new USer(email_txt,pass_txt,name_txt,rollnumber);
+                String roll_txt= name.getText().toString();
+                user= new USer(email_txt,pass_txt,name_txt,roll_txt);
                 if(TextUtils.isEmpty(email_txt)||TextUtils.isEmpty(pass_txt)){
                     Toast.makeText(RegisterActivity.this,"Credentials are Empty",Toast.LENGTH_LONG).show();
                 }else if(pass_txt.length()<6){
