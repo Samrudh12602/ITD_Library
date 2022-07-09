@@ -5,6 +5,8 @@ import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -27,14 +29,14 @@ public class YearSelectionActivity extends AppCompatActivity {
         be=findViewById(R.id.beCardView);
         logout=findViewById(R.id.logout);
         auth=FirebaseAuth.getInstance();
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                auth.signOut();
-                startActivity(new Intent(YearSelectionActivity.this,MainActivity.class));
-                finish();
-            }
-        });
+//        logout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                auth.signOut();
+//                startActivity(new Intent(YearSelectionActivity.this,MainActivity.class));
+//                finish();
+//            }
+//        });
         View.OnClickListener listener= new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,5 +52,12 @@ public class YearSelectionActivity extends AppCompatActivity {
         se.setOnClickListener(listener);
         te.setOnClickListener(listener);
         be.setOnClickListener(listener);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater= getMenuInflater();
+        inflater.inflate(R.menu.menu,menu);
+        return true;
     }
 }
