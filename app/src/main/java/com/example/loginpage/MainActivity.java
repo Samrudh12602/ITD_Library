@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 } else if (password.length() < 6) {
                     Toast.makeText(getApplicationContext(), "Password Too short", Toast.LENGTH_LONG).show();
                 } else {
-                    loginUser(email, password);
+//                    loginUser(email, password);
                 }
                 startActivity(new Intent(MainActivity.this, YearSelectionActivity.class));
             }
