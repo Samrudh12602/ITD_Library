@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.loginpage">
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,12 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginPage">
         <activity
+            android:name=".AboutUsActivity"
+            android:exported="false" />
+        <activity
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
-            android:parentActivityName=".YearSelectionActivity"
             android:name=".BE_subjects"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".YearSelectionActivity" />
         <activity
             android:name=".splashactivity"
             android:exported="true">
@@ -25,13 +29,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:parentActivityName=".YearSelectionActivity"
             android:name=".TE_subjects"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".YearSelectionActivity" />
         <activity
-            android:parentActivityName=".YearSelectionActivity"
             android:name=".SE_subject"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".YearSelectionActivity" />
         <activity
             android:name=".YearSelectionActivity"
             android:exported="false" />
