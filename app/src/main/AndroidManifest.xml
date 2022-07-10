@@ -10,12 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginPage">
         <activity
+            android:parentActivityName=".PdfActivity"
             android:name=".PdfViewActivity"
             android:exported="false" />
         <activity
+            android:parentActivityName=".YearSelectionActivity"
             android:name=".PdfActivity"
             android:exported="false" />
         <activity
+            android:parentActivityName=".YearSelectionActivity"
             android:name=".AboutUsActivity"
             android:exported="false" />
         <activity
