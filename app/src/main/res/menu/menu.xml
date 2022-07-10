@@ -7,6 +7,11 @@
     app:showAsAction="ifRoom">
 
 </item>
+    <item android:id="@+id/syllabus"
+        android:title="RC 19-20 Scheme"
+        android:icon="@drawable/pdficon"
+        app:showAsAction="never">
+    </item>
     <item android:id="@+id/logout"
         android:title="LogOut"
         android:icon="@drawable/ic_power"

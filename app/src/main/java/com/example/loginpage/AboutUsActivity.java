@@ -40,20 +40,15 @@ public class AboutUsActivity extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.about:break;
             case android.R.id.home:onBackPressed();return true;
-            case R.id.logout: new AlertDialog.Builder(this)
+            case R.id.logout:      new AlertDialog.Builder(this)
                     .setMessage("Are you sure you want to Logout?")
                     .setCancelable(false)
                     .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
-                            AboutUsActivity.this.finish();
-                        }
-                    })
-                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
                             auth.signOut();startActivity(new Intent(AboutUsActivity.this,MainActivity.class));finish();
                         }
                     })
+                    .setNegativeButton("No", null)
                     .show();break;
         }
         return super.onOptionsItemSelected(item);

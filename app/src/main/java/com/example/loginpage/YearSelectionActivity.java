@@ -64,15 +64,10 @@ public class YearSelectionActivity extends AppCompatActivity {
                     .setCancelable(false)
                     .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
-                            YearSelectionActivity.this.finish();
-                        }
-                    })
-                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
                             auth.signOut();startActivity(new Intent(YearSelectionActivity.this,MainActivity.class));finish();
                         }
                     })
+                    .setNegativeButton("No", null)
                     .show();break;
         }
         return super.onOptionsItemSelected(item);
