@@ -36,13 +36,6 @@ public class PdfAdapter extends RecyclerView.Adapter<PdfAdapter.PdfViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull PdfViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.pdfName.setText(list.get(position).getName());
-
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(context,list.get(position).getName(),Toast.LENGTH_LONG).show();
-            }
-        });
         holder.download.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -2,6 +2,7 @@ package com.example.loginpage;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -38,9 +39,13 @@ public class PdfActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 list= new ArrayList<>();
                 for(DataSnapshot snapshot: dataSnapshot.getChildren()){
-                    PdfData data= snapshot.getValue(PdfData.class);
+                    String url= snapshot.child("pdfUrl").getValue(String.class);
+                    String name= snapshot.child("pdfTitle").getValue(String.class);
+                    String category= snapshot.child("pdfCategory").getValue(String.class);
+                    PdfData data= new PdfData(category,name,url);
                     list.add(data);
                     adapter= new PdfAdapter(PdfActivity.this,list);
+                    pdfrecycler.setLayoutManager(new LinearLayoutManager(PdfActivity.this ));
                     pdfrecycler.setAdapter(adapter);
                 }
             }

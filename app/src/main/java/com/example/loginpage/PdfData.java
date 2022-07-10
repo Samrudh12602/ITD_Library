@@ -9,6 +9,9 @@ public class PdfData {
         this.url = url;
     }
 
+    public PdfData() {
+    }
+
     public String getCategory() {
         return category;
     }

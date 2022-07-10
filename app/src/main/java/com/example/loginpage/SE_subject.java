@@ -36,13 +36,19 @@ public class SE_subject extends AppCompatActivity {
                 Intent i;
                 switch (view.getId()){
                     case R.id.ie: i= new Intent(SE_subject.this,PdfActivity.class);i.putExtra("subject","IE");startActivity(i);break;
-                    case R.id.maths: i= new Intent(SE_subject.this,PdfActivity.class);i.putExtra("subject","MATHS");startActivity(i);break;
+                    case R.id.maths: i= new Intent(SE_subject.this,PdfActivity.class);i.putExtra("subject","Maths");startActivity(i);break;
                     case R.id.cn: i= new Intent(SE_subject.this,PdfActivity.class);i.putExtra("subject","CN");startActivity(i);break;
                     case R.id.dsa: i= new Intent(SE_subject.this,PdfActivity.class);i.putExtra("subject","DSA");startActivity(i);break;
                     case R.id.se: i= new Intent(SE_subject.this,PdfActivity.class);i.putExtra("subject","SE");startActivity(i);break;
                 }
             }
         };
+
+        ie.setOnClickListener(listener);
+        cn.setOnClickListener(listener);
+        dsa.setOnClickListener(listener);
+        se.setOnClickListener(listener);
+        maths.setOnClickListener(listener);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
