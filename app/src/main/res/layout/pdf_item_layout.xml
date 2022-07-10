@@ -4,41 +4,37 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardElevation="3dp"
     android:layout_height="wrap_content"
-    android:layout_margin="3dp"
-
-    >
-
+    android:layout_margin="3dp">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-    android:layout_margin="15dp"
-        >
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/pdficon"
-            android:padding="6dp"
-            />
-        <TextView
-            android:id="@+id/pdfName"
+        android:orientation="vertical"
+        android:layout_margin="15dp">
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Data structures using c "
-         android:padding="3dp"
-            android:textSize="20dp"
-            android:textColor="@color/black"
-            android:layout_marginLeft="7dp"
-            />
-   <ImageView
-       android:id="@+id/downloadPdf"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:src="@drawable/ic_baseline_cloud_download_24"
-       android:layout_marginLeft="-30dp"
-       android:padding="3dp"
-         />
-
-
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pdficon"
+                android:padding="6dp" />
+            <TextView
+                android:id="@+id/pdfName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Data structures using c "
+                android:padding="3dp"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="7dp" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/downloadPdf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_cloud_download_24"
+            android:layout_gravity="center"
+            android:padding="3dp" />
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>
