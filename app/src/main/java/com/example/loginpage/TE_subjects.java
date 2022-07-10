@@ -37,8 +37,7 @@ public class TE_subjects extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.about:
-                break;
+            case R.id.about:startActivity(new Intent(TE_subjects.this,AboutUsActivity.class));break;
             case R.id.syllabus:Intent i= new Intent(TE_subjects.this,PdfActivity.class);i.putExtra("subject","Syllabus");startActivity(i);break;
             case android.R.id.home:
                 onBackPressed();

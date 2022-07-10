@@ -34,7 +34,7 @@ public class BE_subjects extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
-            case R.id.about:break;
+            case R.id.about:startActivity(new Intent(BE_subjects.this,AboutUsActivity.class));break;
             case android.R.id.home:onBackPressed();return true;
             case R.id.syllabus:Intent i= new Intent(BE_subjects.this,PdfActivity.class);i.putExtra("subject","Syllabus");startActivity(i);break;
             case R.id.logout:      new AlertDialog.Builder(this)
