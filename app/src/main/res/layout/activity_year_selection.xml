@@ -21,7 +21,8 @@
         android:textStyle="bold"
         android:padding="10dp"
         android:gravity="center"
-        ></TextView>
+        >
+    </TextView>
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="500dp"
