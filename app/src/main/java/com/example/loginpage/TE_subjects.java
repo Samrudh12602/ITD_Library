@@ -1,10 +1,13 @@
 package com.example.loginpage;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -30,9 +33,30 @@ public class TE_subjects extends AppCompatActivity {
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.about:startActivity(new Intent(TE_subjects.this,AboutUsActivity.class));break;
-            case R.id.logout:auth.signOut();startActivity(new Intent(TE_subjects.this,MainActivity.class));finish();break;
+        switch (item.getItemId()) {
+            case R.id.about:
+                break;
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+            case R.id.logout:
+                new AlertDialog.Builder(this)
+                        .setMessage("Are you sure you want to Logout?")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                TE_subjects.this.finish();
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                auth.signOut();
+                                startActivity(new Intent(TE_subjects.this, MainActivity.class));
+                                finish();
+                            }
+                        })
+                        .show();break;
         }
         return super.onOptionsItemSelected(item);
     }

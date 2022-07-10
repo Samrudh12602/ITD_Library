@@ -48,8 +48,10 @@ public class PdfViewActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
-            case R.id.about:break;
-            case R.id.logout:break;
+            case R.id.about:
+            case R.id.logout:
+                break;
+            case android.R.id.home:onBackPressed();return true;
         }
         return super.onOptionsItemSelected(item);
     }

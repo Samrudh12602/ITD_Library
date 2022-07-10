@@ -1,9 +1,11 @@
 package com.example.loginpage;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -57,8 +59,36 @@ public class YearSelectionActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.about:startActivity(new Intent(YearSelectionActivity.this,AboutUsActivity.class));break;
-            case R.id.logout:auth.signOut();startActivity(new Intent(YearSelectionActivity.this,MainActivity.class));finish();break;
+            case R.id.logout:      new AlertDialog.Builder(this)
+                    .setMessage("Are you sure you want to Logout?")
+                    .setCancelable(false)
+                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            YearSelectionActivity.this.finish();
+                        }
+                    })
+                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            auth.signOut();startActivity(new Intent(YearSelectionActivity.this,MainActivity.class));finish();
+                        }
+                    })
+                    .show();break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setMessage("Are you sure you want to exit?")
+                .setCancelable(false)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        YearSelectionActivity.this.finish();
+                    }
+                })
+                .setNegativeButton("No", null)
+                .show();
     }
 }

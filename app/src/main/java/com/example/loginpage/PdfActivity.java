@@ -5,6 +5,7 @@ import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -74,7 +76,21 @@ public class PdfActivity extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.about:startActivity(new Intent(PdfActivity.this,AboutUsActivity.class));break;
             case android.R.id.home:onBackPressed();return true;
-            case R.id.logout:auth.signOut();startActivity(new Intent(PdfActivity.this,MainActivity.class));finish();break;
+            case R.id.logout: new AlertDialog.Builder(this)
+                    .setMessage("Are you sure you want to Logout?")
+                    .setCancelable(false)
+                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            PdfActivity.this.finish();
+                        }
+                    })
+                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            auth.signOut();startActivity(new Intent(PdfActivity.this,MainActivity.class));finish();
+                        }
+                    })
+                    .show();break;
         }
         return super.onOptionsItemSelected(item);
     }

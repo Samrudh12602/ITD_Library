@@ -1,8 +1,10 @@
 package com.example.loginpage;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -38,7 +40,21 @@ public class AboutUsActivity extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.about:break;
             case android.R.id.home:onBackPressed();return true;
-            case R.id.logout:auth.signOut();startActivity(new Intent(AboutUsActivity.this,MainActivity.class));finish();break;
+            case R.id.logout: new AlertDialog.Builder(this)
+                    .setMessage("Are you sure you want to Logout?")
+                    .setCancelable(false)
+                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            AboutUsActivity.this.finish();
+                        }
+                    })
+                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            auth.signOut();startActivity(new Intent(AboutUsActivity.this,MainActivity.class));finish();
+                        }
+                    })
+                    .show();break;
         }
         return super.onOptionsItemSelected(item);
     }
