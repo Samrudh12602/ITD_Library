@@ -37,7 +37,7 @@ public class AboutUsActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.about:break;
-            case R.id.home:onBackPressed();break;
+            case android.R.id.home:onBackPressed();return true;
             case R.id.logout:auth.signOut();startActivity(new Intent(AboutUsActivity.this,MainActivity.class));finish();break;
         }
         return super.onOptionsItemSelected(item);

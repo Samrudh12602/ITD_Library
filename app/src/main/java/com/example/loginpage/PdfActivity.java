@@ -73,7 +73,7 @@ public class PdfActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.about:startActivity(new Intent(PdfActivity.this,AboutUsActivity.class));break;
-            case R.id.home:onBackPressed();break;
+            case android.R.id.home:onBackPressed();return true;
             case R.id.logout:auth.signOut();startActivity(new Intent(PdfActivity.this,MainActivity.class));finish();break;
         }
         return super.onOptionsItemSelected(item);
