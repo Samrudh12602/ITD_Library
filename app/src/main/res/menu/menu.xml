@@ -7,16 +7,16 @@
     app:showAsAction="ifRoom">
 
 </item>
-    <item android:id="@+id/syllabus"
-        android:title="RC 19-20 Scheme"
-        android:icon="@drawable/pdficon"
-        android:iconTint="@color/myBlue"
-        app:showAsAction="never">
-    </item>
-    <item android:id="@+id/logout"
-        android:title="LogOut"
-        android:icon="@drawable/ic_power"
-        android:iconTint="@color/myBlue"
-        app:showAsAction="never">
-    </item>
+        <item android:id="@+id/syllabus"
+            android:title="RC 19-20 Scheme"
+            android:icon="@drawable/pdficon"
+            android:iconTint="@color/white"
+            app:showAsAction="never">
+        </item>
+        <item android:id="@+id/logout"
+            android:title="LogOut"
+            android:icon="@drawable/ic_power"
+            android:iconTint="@color/white"
+            app:showAsAction="never">
+        </item>
 </menu>

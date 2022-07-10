@@ -3,7 +3,9 @@ package com.example.loginpage;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.view.menu.MenuBuilder;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -25,6 +27,7 @@ public class TE_subjects extends AppCompatActivity {
         setContentView(R.layout.activity_te_subjects);
         auth=FirebaseAuth.getInstance();
     }
+    @SuppressLint("RestrictedApi")
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater= getMenuInflater();
