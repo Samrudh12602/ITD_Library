@@ -59,6 +59,7 @@ public class YearSelectionActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.about:startActivity(new Intent(YearSelectionActivity.this,AboutUsActivity.class));break;
+            case R.id.syllabus:Intent i= new Intent(YearSelectionActivity.this,PdfActivity.class);i.putExtra("subject","Syllabus");startActivity(i);break;
             case R.id.logout:      new AlertDialog.Builder(this)
                     .setMessage("Are you sure you want to Logout?")
                     .setCancelable(false)

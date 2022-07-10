@@ -36,6 +36,7 @@ public class BE_subjects extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.about:break;
             case android.R.id.home:onBackPressed();return true;
+            case R.id.syllabus:Intent i= new Intent(BE_subjects.this,PdfActivity.class);i.putExtra("subject","Syllabus");startActivity(i);break;
             case R.id.logout:      new AlertDialog.Builder(this)
                     .setMessage("Are you sure you want to Logout?")
                     .setCancelable(false)
