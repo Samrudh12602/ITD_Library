@@ -29,7 +29,6 @@ public class PdfActivity extends AppCompatActivity {
         pdfrecycler=findViewById(R.id.pdfRecycler);
         subject=getIntent().getStringExtra("subject");
         reference= FirebaseDatabase.getInstance().getReference().child("pdf").child(subject);
-
         getData();
     }
 
@@ -50,6 +49,6 @@ public class PdfActivity extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) {
                 Toast.makeText(getApplicationContext(),error.getMessage(),Toast.LENGTH_LONG).show();
             }
-        })
+        });
     }
 }
