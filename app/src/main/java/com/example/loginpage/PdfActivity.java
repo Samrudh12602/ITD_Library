@@ -5,9 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -19,6 +24,7 @@ import java.util.List;
 
 public class PdfActivity extends AppCompatActivity {
     private RecyclerView pdfrecycler;
+    FirebaseAuth auth;
     private DatabaseReference reference;
     private List<PdfData> list;
     String subject;
@@ -31,6 +37,21 @@ public class PdfActivity extends AppCompatActivity {
         subject=getIntent().getStringExtra("subject");
         reference= FirebaseDatabase.getInstance().getReference().child("pdf").child(subject);
         getData();
+        auth=FirebaseAuth.getInstance();
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater= getMenuInflater();
+        inflater.inflate(R.menu.menu,menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.about:startActivity(new Intent(PdfActivity.this,AboutUsActivity.class));break;
+            case R.id.logout:auth.signOut();startActivity(new Intent(PdfActivity.this,MainActivity.class));finish();break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void getData() {
