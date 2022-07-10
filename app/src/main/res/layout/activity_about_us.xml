@@ -3,38 +3,44 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-android:padding="10dp"
+    android:layout_height="match_parent"
     android:layout_gravity="center"
     android:background="@drawable/imgback"
-    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
     tools:context=".AboutUsActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="About us"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        android:textColor="#E4044A6C"
         android:gravity="center"
-        >
+        android:text="About us"
+        android:textColor="#E4044A6C"
+        android:textSize="30dp"
+        android:textStyle="bold">
 
     </TextView>
+
     <androidx.cardview.widget.CardView
+
         android:layout_width="match_parent"
-     android:layout_margin="11dp"
-
         android:layout_height="wrap_content"
-        app:cardCornerRadius="10dp"
-        >
 
-        <TextView
-
-            android:padding="15dp"
+        android:layout_margin="11dp"
+        app:cardCornerRadius="10dp">
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-                android:text="The focus of this app is to provide Digital library to the students of Information Technology.It provides the students convinience of learning at their own pace.\n
+            android:orientation="vertical">
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="15dp"
+            android:paddingStart="15dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="5dp"
+            android:text="The focus of this app is to provide Digital library to the students of Information Technology.It provides the students convinience of learning at their own pace.\n
 
             \nDeveloped By :\n
              \nSamrudh Dhaimodkar
@@ -46,13 +52,22 @@ android:padding="10dp"
              \nBranch : Information technology
              \nClass: IT-B
              \n\nVersion: 1.0.2
-             \n\nContact us:
-             \nSamrudh:samdhaimodkar@gmail.com
-            \nSrujana:srujanaparesh@gmail.com
-"
+             \n\nContact us:"
+            android:textColor="#E4055C86"
             android:textSize="20dp"
+            android:textStyle="bold" />
+        <TextView
+            android:paddingBottom="15dp"
+            android:paddingEnd="15dp"
+            android:paddingStart="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\nSamrudh:samdhaimodkar@gmail.com
+            \nSrujana:srujanaparesh@gmail.com"
+            android:textColor="#E4055C86"
             android:textStyle="bold"
-            android:textColor="#E4055C86"/>
+            android:textSize="18sp" />
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 
 </LinearLayout>
