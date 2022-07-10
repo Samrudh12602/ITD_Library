@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">IT Dept Library</string>
+    <string name="app_name">IT Library</string>
     <string-array name="year">
         <item>Select A Year</item>
         <item>FE</item>
