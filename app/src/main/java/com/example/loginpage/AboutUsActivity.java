@@ -21,6 +21,12 @@ public class AboutUsActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater= getMenuInflater();
@@ -31,6 +37,7 @@ public class AboutUsActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.about:break;
+            case R.id.home:onBackPressed();break;
             case R.id.logout:auth.signOut();startActivity(new Intent(AboutUsActivity.this,MainActivity.class));finish();break;
         }
         return super.onOptionsItemSelected(item);

@@ -60,6 +60,10 @@ public class PdfActivity extends AppCompatActivity {
         }
     }
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater= getMenuInflater();
         inflater.inflate(R.menu.menu,menu);
@@ -69,6 +73,7 @@ public class PdfActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.about:startActivity(new Intent(PdfActivity.this,AboutUsActivity.class));break;
+            case R.id.home:onBackPressed();break;
             case R.id.logout:auth.signOut();startActivity(new Intent(PdfActivity.this,MainActivity.class));finish();break;
         }
         return super.onOptionsItemSelected(item);
