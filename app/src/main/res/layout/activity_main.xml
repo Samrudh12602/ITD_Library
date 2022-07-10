@@ -45,6 +45,7 @@
 
             </EditText>
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
@@ -64,7 +65,7 @@
                     android:backgroundTint="#00010000"
                     android:gravity="center"
                     android:textSize="20sp"
-                    android:inputType="textWebPassword"
+                    android:inputType="textPassword"
                     android:padding="10dp">
                 </com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>

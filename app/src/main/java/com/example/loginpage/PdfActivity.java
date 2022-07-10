@@ -38,6 +38,8 @@ public class PdfActivity extends AppCompatActivity {
         reference= FirebaseDatabase.getInstance().getReference().child("pdf").child(subject);
         getData();
         auth=FirebaseAuth.getInstance();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
